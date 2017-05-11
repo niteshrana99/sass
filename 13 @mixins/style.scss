@@ -1,0 +1,58 @@
+//Mixins: Allow us to create reusable styles:
+@mixin featured{
+  color: blue;
+  font-size: 12px;
+}
+
+.section{
+  @include featured;
+}
+// We have done the same by using extends directive. But with the help of mixins we can pass parameters also
+
+@mixin parameter($size){
+  font-size: $size;
+}
+
+.div{
+  @include parameter(12px);
+}
+
+// We can also set default arguments
+
+@mixin parameter1($size:22px){
+  font-size: $size;
+}
+
+.div{
+  @include parameter1; //if we don't pass parameters the default params will be taken into effect.
+}
+//mixins can include selectors. Example suppose mixin has a selector of .button
+
+@mixin parameter12 {
+  .button {
+    font-size: 12px;
+  }
+}
+
+@include parameter12;
+
+//margin requires 4 values, how can we pass these.
+
+@mixin margin-prop($args...){
+  margin:$args;
+}
+
+.element{
+  @include margin-prop(1px 2px 3px 4px)
+}
+
+//mixins can also include other mixins
+
+@mixin button{
+  @include featured;
+  color: red;
+}
+
+.container{
+  @include button;
+}

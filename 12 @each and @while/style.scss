@@ -1,0 +1,51 @@
+//each and while directives
+//@each will run through map or list and will use multiple vars
+
+@each $section in featured, about , contact{ // $section will run through list changing it's value to featured, about and list
+  .btn-#{$section} {
+  color:red;
+}
+}
+ // Multiple vars
+@each $section,$color in (featured,red),(about,blue){ //while iterating the val of @section will be 1st val of list and color will be second value
+  .btn-#{$section}{
+    color: $color;
+  }
+}
+
+//Using each through maps: In above code we see, if the key value pairs increase then it will be an issue. So to solve we use maps
+
+$scene-heading:(
+h1:12px,
+        h2:14px,
+        h3:16px,
+        h4:18px,
+        h5:20px
+);
+
+@each $heading,$size in $scene-heading{
+#{$heading}{
+  font-size: $size;
+};
+}
+
+
+//***********************************************************************************
+
+//@while is same as while loop
+$i:1;
+@while $i<10{
+  a#{$i}{
+    color: black;
+
+  }
+  $i:$i+1;
+}
+
+$j:1;
+@while $j<=4{
+  h#{$j}{
+    font-size: map-get($scene-heading,h#{$j});
+  }
+  $j:$j+1;
+}

@@ -1,0 +1,36 @@
+p {
+  font-size: 16px; }
+  p a {
+    background-color: red; }
+
+a {
+  background-color: aqua; }
+  a:hover {
+    background-color: black; }
+
+#demo-child {
+  margin: 5px; }
+#demochild {
+  margin: 5px; }
+#demo.child {
+  margin: 5px; }
+#demo .child {
+  margin: 5px; }
+
+.container {
+  color: aquamarine; }
+  .container .span {
+    color: blue; }
+
+.span {
+  background-color: yellow; }
+  .container .span {
+    background-color: blanchedalmond; }
+
+body .span1 {
+  background-color: green; }
+
+.container > header h1 {
+  background-color: brown; }
+
+/*# sourceMappingURL=style.css.map */

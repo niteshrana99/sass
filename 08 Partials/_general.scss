@@ -1,0 +1,8 @@
+// If we are watching folder and converting scss into css, if we define our scss files using _filename it will not be compiled to css.
+.btn{
+  color: #cccccc;
+  color:rgb(222,222,222);
+  color:rgba(1,1,1,0);
+  color:hsl(1,1,1);
+  color:blue;
+}

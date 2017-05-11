@@ -1,0 +1,13 @@
+// CSS has few properties that belong to namespaces. Example faon-size, font-weight etc.
+body{
+  font:{
+    weight: 100;
+    size: 160%;
+    stretch: condensed;
+  }
+
+}
+
+// So this will also work for other properties that share common namespace, exampleL background-color background-visibility ,
+// margin-left, etc. etc. We have to pe careful about non-existing property names.
+// Also if we have a shortahand eg: for margin we can have a shorthand as margin:3 4 5 6, so it is better to use shorthand.

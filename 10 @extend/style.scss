@@ -1,0 +1,41 @@
+//Extend directive allows selector to inherit style from other selector:
+.btn{
+  display: inline-block;
+  padding:12px;
+  background-color: green;
+  border-radius:12px ;
+}
+
+.btn-large{
+  @extend .btn;
+  padding: 14px; //So i just change the stuff i want. So btn-large inherits all the properties from .btn but will also overwrite
+  //adding it's own styles
+}
+
+//Chain extend
+
+.btn-xlarge{
+  @extend .btn-large;
+  padding:17px;
+}
+
+//We can also create multiple extends
+btn-cta{
+  @extend .btn-large;
+  @extend .btn-xlarge;
+}
+
+//Extend also works with directives
+@media screen and (max-widthL 1000px){
+    .submit{
+      background-color: green;
+    }
+  input[type="submit"] {
+    @extend .submit;
+    //@extend .btn-large;  It will not work as the selector is outside the directive
+  }
+}
+
+.btn-123{
+  @extend .submit;// But this will work even submit is inside @media directive
+}

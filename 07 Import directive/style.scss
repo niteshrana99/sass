@@ -1,0 +1,70 @@
+//Data types: 7 types:
+//Numbers, string, colors, boolean, null, lists and maps
+//Numbers
+
+//strings
+
+
+//colors:
+.btn{
+  color: #cccccc;
+  color:rgb(222,222,222);
+  color:rgba(1,1,1,0);
+  color:hsl(1,1,1);
+  color:blue;
+}
+//lists: Series of values separated by space or commas
+.sidebar{
+  margin:1px 1px 1px 1px;
+}
+
+//maps: lists represented by key value pairs
+$colors:(
+  1:#34C456,
+  2:#10C611
+);
+
+$additional-colors:(
+"color-1":#654454,
+        "color-2":#895234
+);
+
+$margins:(
+tight:20px 30px,
+        compact:30px,
+        large:4em
+);
+
+// if the inner list have same separator as outer list ie. suppose the inner list has same separator comma than outer list
+
+//$fonts:(
+//option-1:Arial,sans-serif,
+//option-2:Helvicta,sans-serif
+//)
+
+//The above code will give an error as comma is separating both inner and outer lists. So we need to use brackets
+$fonts:(
+        option-1:(Arial,sans-serif),
+option-2:(Helvicta,sans-serif)
+);
+
+//Now how to use these values. We have to use function map-get.
+body{
+  color: map-get($colors,1);
+  color:map-get($additional-colors,"color-1");
+  margin:map-get($margins,compact);
+  font-family: map-get($fonts,option-1);
+}
+//There is boolean, useful in operations, also a null data type. Useful when to remove a value
+
+@import 'numbers.scss';
+@import "strings"; //no need of .scss file extension
+
+//We can also write something like this
+@import "strings","numbers"; //the order is important
+
+//these will generate css @import rules
+@import "dummy.css";
+@import url('http://fonts.googleapis.com/css?family=Oswald'); //this will also be changed into css import
+@import "strings.scss" print; //it says for media query. It says import print for print
+//also when filename begins with https: example for loading aontawesome cdn , it will be taken as css import

@@ -1,0 +1,27 @@
+body {
+  margin: 100px;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 1%; }
+
+body {
+  font-family: 'Arial';
+  font-weight: bold; }
+
+.btn {
+  color: #cccccc;
+  color: #dedede;
+  color: rgba(1, 1, 1, 0);
+  color: #030303;
+  color: blue; }
+
+.sidebar {
+  margin: 1px 1px 1px 1px; }
+
+body {
+  color: #34C456;
+  color: #654454;
+  margin: 30px;
+  font-family: Arial, sans-serif; }
+
+/*# sourceMappingURL=style.css.map */

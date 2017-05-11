@@ -1,0 +1,11 @@
+.sidebar-widget {
+  padding: 700px; }
+
+.container {
+  font: 400 1.125em/1.5 Helvetica, Arial, sans-serif; }
+
+.container:before {
+  content: '- $before';
+  content: "- 123"; }
+
+/*# sourceMappingURL=style.css.map */

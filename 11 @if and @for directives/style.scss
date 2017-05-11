@@ -1,0 +1,43 @@
+//If and for directive.
+$font:Serif;
+.button {
+  @if $font == Serif {
+  background-color: green;
+} @else if $font == Ariel {
+  background-color: transparent;
+} @else {
+  background-color: red;
+}
+}
+
+//for loop for repeating selectors
+
+@for $i from 1 to 3 {
+  .cell{ //cell will compile two times, so 'to' will not include last point
+    background: blue;
+  }
+}
+
+@for $i from 1 through 3 {
+  .cell123 { //cell will compile three times. So with through we compile three times.
+    background: blue;
+  }
+}
+
+//using vars in for loop
+
+$count:5;
+
+@for $i from 1 through $count{
+  .body-#{$i}{
+    color:red;
+  }
+}
+
+//going reverse
+
+@for $i from $count through 1{
+  .div-#{$i}{
+    color:red;
+  }
+}

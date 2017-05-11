@@ -1,0 +1,8 @@
+//Partials are regular scss files that can be imported but are not compiled by sass
+//These files will not be compiled to css but they can be imported like any other sass file
+
+@import "general";
+
+
+// -- We cannot include a partial and non-partial in same directory. Ex: I can't have file name general.scss.
+// --Also order of loading files is also applied here.

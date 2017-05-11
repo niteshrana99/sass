@@ -1,0 +1,22 @@
+@media screen and (max-width: 768px) {
+  .nav {
+    background-color: red; }
+    .nav a {
+      display: block; } }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    background-color: red; }
+    .nav a {
+      display: block; } }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    background-color: red; }
+    .nav a {
+      display: block; } }
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .nav {
+      background-color: brown; } }
+
+/*# sourceMappingURL=style.css.map */

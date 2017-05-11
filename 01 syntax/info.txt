@@ -1,0 +1,11 @@
+
+We will see the differnce in the syntax of scss and sass. scss is sassy CSS.
+Main differences:
+SCSS:
+It is the extension of basic or plain css. SO any valid css is also scss file. So in scss file we can write css.
+
+SASS:
+SASS is also a extentions of css but we can do more with it like nesting, variables etc.
+But it is very syntactically different.
+Example SASS instead of semicolons SAAS uses new line to separate properties. So it's not compatible with CSS. Alos we
+use indentation insted of brackets.

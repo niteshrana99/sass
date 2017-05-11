@@ -1,0 +1,35 @@
+//@media directive is very similar to css but only difference is it can be nested.
+
+.nav{
+  @media screen and (max-width: 768px){
+      background-color: red;
+    a{
+      display: block;
+    }
+  }
+}
+
+//So we see in css, at the root level is media screen and then nav.
+//media can contain variable function operator
+$tablet-breakpoint:'screen and (max-width: 768px)';
+.nav{
+  @media #{$tablet-breakpoint}{
+    background-color: red;
+    a{
+      display: block;
+    }
+  }
+}
+
+//We can also nest media inside the media and the queries will be combined by and in css.
+.nav{
+  @media #{$tablet-breakpoint}{
+    background-color: red;
+    a{
+      display: block;
+    }
+    @media (orientation: portrait) {
+      background-color: brown;
+    }
+  }
+}

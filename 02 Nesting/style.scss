@@ -1,0 +1,64 @@
+//This is the basic examle of nesting. Suppose we want to change the background color of all the anchor tags inside of of paragraph.
+// We can do it like this and see the corrosponding css formed by sass --watch style.scss:style.css. We can go as deep down we want.
+//Now we will learn how to use parent selector ampersand(&). Now suppose i want a text decoration on hover on anchoer tag, so we can
+// use parent selector
+// We see anchor tag is replaced by the name of parent i.e. a in this case.
+p{
+    font-size: 16px;
+    a{
+        background-color: red;
+        
+       
+    }
+}
+
+a{
+    background-color: aqua;
+     
+        &:hover {
+            background-color: black;
+        }
+}
+
+//the parent selector can be used in various ways.
+#demo{
+    &-child{margin:5px}; // We see in css this is compiled to #demo-child which is a new selector itself
+    &child{margin:5px};// We see in css this is compiled to #demo-child which is a new selector itself
+    &.child{margin:5px}; //Here it looks for targets the element with the id of demo and class of child
+    & .child{margin:5px};// Class of child that has a parent demo. Now & does not need to be at start.
+}
+
+
+.container{
+    color:aquamarine;
+    & .span{
+        color:blue;
+    }
+}
+
+//& does not  necessary needs to come in first. It can come at last also
+
+.span{
+    background-color: yellow;
+    .container &{
+    background-color: blanchedalmond;
+}
+}
+//The other use of & comes in this case. Suppose I have a selector on body
+body{
+    & .span1{
+        background-color: green;
+    }
+}
+
+//we can even do more complex selections:
+.container{
+    > header{
+        h1 {
+            background-color: brown;
+        }
+    }
+}
+
+// So we can go as deeper as we want. But we have to consider some best practices. Example Sometimes dom structure changes and if nesting is deep than
+//that will create problems, So 3 or 4 levels are fine.

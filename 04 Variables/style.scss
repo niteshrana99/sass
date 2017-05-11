@@ -1,0 +1,14 @@
+// Variables are used for repeated code
+$text-color:brown;// Global scope variable
+$font-size:16px;
+.container{
+  color: $text-color;
+  font-size: $font-size+10;
+}
+.span1{
+  $font-size1:8px; //local variable if you want to make it global use !global after it $font-size1:8px !global
+  color: $text-color;
+  font-size: $font-size1+10;
+}
+
+// So we can do it for any properties. I can also do mathematical operations on variable

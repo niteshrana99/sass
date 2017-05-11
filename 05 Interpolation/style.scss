@@ -1,0 +1,28 @@
+// Interpolation: Technique allows us to substitute var inti expression with it's value:
+//Demo
+
+$child:"widget";
+
+.sidebar-#{$child}{
+  padding:700px;
+}
+
+//So the other uses are example in shorthand for font
+
+$line-height:1.5;
+$base-font-size:1.125em;
+$text-family:Helvetica, Arial, sans-serif;
+.container{
+  //font: 400 $base-font-size/$line-height $text-family; //Now if you see this code it will devide  $base-font-size/$line-height. But we don't want that
+  // so we use
+  font: 400 #{$base-font-size}/#{$line-height} $text-family; //It will get value from line height instead of doing division
+}
+
+//Another example is suppose we want to add some variable in content or any property
+$before:123;
+.container{
+  &:before{
+    content: '- $before';// We see it didnot compile it as variable in string. So we can use interpolation
+    content: '- #{$before}';
+  }
+}
